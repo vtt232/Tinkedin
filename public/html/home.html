@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+
+    <!--STYLESHEETS-->
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/headers.css" />
+    <link rel="stylesheet" href="../css/buttons.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+
+    <!--GOOGLE FONT FAMILY-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--ION ICON INSTALLATION-->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!--FAVICON-->
+    <link rel="icon" type="image/png" href="../img/static/logo.png" />
+  </head>
+  <body>
+    <section class="jobs">
+      <nav class="nav">
+        <div class="nav__left">
+          <div class="nav__logo-container">
+            <img src="../img/static/logo.png" class="nav__logo" />
+          </div>
+
+          <div class="nav__search-bar">
+            <input
+              class="nav__search-bar-input"
+              type="text"
+              placeholder="Search"
+            />
+            <ion-icon
+              name="search-outline"
+              class="nav__search-bar-icon"
+            ></ion-icon>
+          </div>
+        </div>
+
+        <ul class="nav__items">
+          <li class="nav__item nav__item--active">
+            <ion-icon name="home" class="nav__item-icon"></ion-icon>
+            <p class="nav__item-text">Home</p>
+          </li>
+
+          <li class="nav__item">
+            <ion-icon name="person-outline" class="nav__item-icon"></ion-icon>
+            <p class="nav__item-text">Profile</p>
+          </li>
+
+          <li class="nav__item">
+            <ion-icon name="bag-outline" class="nav__item-icon"></ion-icon>
+            <p class="nav__item-text">Jobs</p>
+          </li>
+
+          <li class="nav__item">
+            <ion-icon name="log-out-outline" class="nav__item-icon"></ion-icon>
+            <p class="nav__item-text">Log out</p>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="feed__container">
+        <div class="post-form-container">
+          <form class="post-form">
+            <div class="post-form__avatar-container">
+              <img
+                class="post-form__avatar"
+                src="../img/users/avatars/default.jpg"
+                alt="User avatar"
+              />
+            </div>
+            <div class="post-form__input-section">
+              <div class="post-form__input-container">
+                <textarea
+                  placeholder="What's happening ?"
+                  class="post-form__input"
+                ></textarea>
+              </div>
+              <div class="post-form__buttons">
+                <label class="btn btn--red">
+                  <input type="file" style="display: none" />
+                  Upload image
+                </label>
+                <button class="btn btn--blue">Create new post</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <ul class="posts__list">
+          <li class="post__container">
+            <div class="post">
+              <div class="post__avatar-container">
+                <img
+                  class="post__avatar"
+                  src="../img/users/avatars/default.jpg"
+                  alt="User avatar"
+                />
+              </div>
+              <div class="post__info">
+                <div class="post__userdata">
+                  <div class="post__userdisplay">
+                    <a class="post__name" href="#">Palash</a>
+                  </div>
+                  <p class="post__date">Apr 26, 2020</p>
+                </div>
+                <p class="post__content">
+                  What's the object oriented way to become wealthy?
+                  <br />
+                  <br />
+                  Inheritance
+                </p>
+                <img
+                  class="post__image"
+                  src="../img/posts/post_62999befaf566948e1fb2eaa_1654237269086.jpeg"
+                />
+              </div>
+              <ion-icon
+                name="close-outline"
+                class="post__delete-btn"
+              ></ion-icon>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>

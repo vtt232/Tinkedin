@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a new account</title>
+
+    <!--STYLESHEETS-->
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/headers.css" />
+    <link rel="stylesheet" href="../css/buttons.css" />
+    <link rel="stylesheet" href="../css/auth.css" />
+
+    <!--GOOGLE FONT FAMILY-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--FAVICON-->
+    <link rel="icon" type="image/png" href="../img/static/logo.png" />
+  </head>
+  <body>
+    <section class="auth">
+      <div class="auth__logo-container">
+        <img class="auth__logo" src="../img/static/logo.png" />
+      </div>
+
+      <div class="auth__form-container">
+        <h3 class="header__tertiary">
+          Make the most out of your professional life
+        </h3>
+
+        <form class="auth__form">
+          <div class="auth__form-item">
+            <label class="auth__form-label" for="username">Username</label>
+            <input
+              class="auth__form-input"
+              type="text"
+              required="true"
+              id="username"
+              placeholder="Enter your username"
+              name="username"
+            />
+          </div>
+
+          <div class="auth__form-item">
+            <label class="auth__form-label" for="password">Password</label>
+            <input
+              class="auth__form-input"
+              type="password"
+              required="true"
+              id="password"
+              placeholder="Enter your password"
+              name="password"
+            />
+          </div>
+
+          <div class="auth__form-item">
+            <label class="auth__form-label" for="email">Email</label>
+            <input
+              class="auth__form-input"
+              type="email"
+              required="true"
+              id="email"
+              placeholder="Enter your email"
+              name="email"
+            />
+          </div>
+
+          <div class="auth__form-item">
+            <label class="auth__form-label" for="phone-number"
+              >Phone Number
+            </label>
+            <input
+              class="auth__form-input"
+              type="email"
+              required="true"
+              id="phone-number"
+              placeholder="Enter your phone number"
+              name="phoneNumber"
+            />
+          </div>
+
+          <div class="auth__form-item">
+            <label class="auth__form-label" for="website">Website </label>
+            <input
+              class="auth__form-input"
+              type="email"
+              required="true"
+              id="website"
+              placeholder="Enter your website"
+              name="website"
+            />
+          </div>
+
+          <div class="auth__form-item auth__form-item-checkbox">
+            <label class="auth__form-label" for="is-company">Is Company </label>
+            <input
+              class="auth__form-input"
+              type="checkbox"
+              required="true"
+              id="is-company"
+              name="isCompany"
+            />
+          </div>
+
+          <button class="btn btn--blue auth__form-btn">
+            Create an account
+          </button>
+
+          <p class="auth__form-text">
+            Already on Tinkedin ? <a href="/login">Click here</a>
+          </p>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

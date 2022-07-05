@@ -1,0 +1,41 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Login to Tinkedin
+
+  // STYLESHEETS
+  link(rel='stylesheet' href='/css/general.css')
+  link(rel='stylesheet' href='/css/headers.css')
+  link(rel='stylesheet' href='/css/buttons.css')
+  link(rel='stylesheet' href='/css/auth.css')
+
+  //JAVASCRIPT 
+  script(src = "/js/login.js" type = 'module')
+
+  // GOOGLE FONT FAMILY
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap' rel='stylesheet')
+
+  // FAVICON
+  link(rel='icon' type='image/png' href='/img/static/logo.png')
+section.auth
+  .auth__logo-container
+    img.auth__logo(src='/img/static/logo.png')
+
+  .auth__form-container
+    h3.header__tertiary
+      | Stay updated on your professional world
+    form.auth__form
+      .auth__form-item
+        label.auth__form-label(for='username') Username
+        input#username.auth__form-input(type='text' required='true' placeholder='Enter your username')
+      .auth__form-item
+        label.auth__form-label(for='password') Password
+        input#password.auth__form-input(type='password' required='true' placeholder='Enter your password')
+      button.btn.btn--blue.auth__form-btn.auth__login-btn Login
+      p.auth__form-text
+        | New to Tinkedin ? 
+        a(href='/signup') Sign up

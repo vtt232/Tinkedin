@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/buttons.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
+    <link rel="stylesheet" href="../css/edit-profile.css" />
+    <link rel="stylesheet" href="../css/confirm-delete.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+
+  <body>
+    <div class="backdrop"></div>
+
+    <div class="modal edit-profile">
+      <header class="edit-profile__header">
+        <ion-icon name="close-outline" class="edit-profile__close"></ion-icon>
+        <h2 class="edit-profile__title">Edit profile</h2>
+        <button class="btn btn--saveProfile btn--black">Save</button>
+      </header>
+      <div class="edit-profile__images">
+        <div class="edit-profile__background-container">
+          <img
+            class="edit-profile__background"
+            src="../img/users/backgrounds/default.jpg"
+          />
+          <label>
+            <input type="file" style="display: none" />
+            <ion-icon
+              name="camera-outline"
+              class="edit-profile__background-change-icon"
+            ></ion-icon>
+          </label>
+        </div>
+
+        <div class="edit-profile__avatar-container">
+          <img
+            class="edit-profile__avatar"
+            src="../img/users/avatars/default.jpg"
+          />
+          <label>
+            <input type="file" style="display: none" />
+            <ion-icon
+              name="camera-outline"
+              class="edit-profile__avatar-change-icon"
+            ></ion-icon>
+          </label>
+        </div>
+        <div class="edit-profile__avatar-spacer"></div>
+      </div>
+
+      <form class="edit-profile__form">
+        <div class="edit-profile__form-element">
+          <label class="edit-profile__form-label" for="name">Name</label>
+          <input
+            class="edit-profile__form-input"
+            id="name"
+            type="text"
+            class="name-input"
+            name="name"
+          />
+        </div>
+
+        <div class="edit-profile__form-element">
+          <label class="edit-profile__form-label" for="education"
+            >Education</label
+          >
+          <input
+            class="edit-profile__form-input"
+            id="education"
+            type="text"
+            class="education-input"
+            name="education"
+          />
+        </div>
+
+        <div class="edit-profile__form-element">
+          <label class="edit-profile__form-label" for="education"
+            >Job Title</label
+          >
+          <input
+            class="edit-profile__form-input"
+            id="jobTitle"
+            type="text"
+            class="jobTitle-input"
+          />
+        </div>
+
+        <div class="edit-profile__form-element">
+          <label class="edit-profile__form-label" for="bio">Biography</label>
+          <input
+            class="edit-profile__form-input"
+            id="bio"
+            type="text"
+            class="bio-input"
+            name="overview"
+          />
+        </div>
+
+        <div class="edit-profile__form-element">
+          <label class="edit-profile__form-label" for="specialities"
+            >Specialities (seperate your skills by colon, e.g
+            React;Javascript;Python)</label
+          >
+          <input
+            class="edit-profile__form-input"
+            id="specialities"
+            type="text"
+            class="specialities-input"
+          />
+        </div>
+
+        <div class="edit-profile__form-element">
+          <label class="edit-profile__form-label" for="email">Email</label>
+          <input
+            class="edit-profile__form-input"
+            id="email"
+            type="text"
+            class="email-input"
+            name="email"
+          />
+        </div>
+
+        <div class="edit-profile__form-element">
+          <label class="edit-profile__form-label" for="phoneNumber"
+            >Phone Number</label
+          >
+          <input
+            class="edit-profile__form-input"
+            id="phoneNumber"
+            type="text"
+            class="phoneNumber-input"
+            name="phoneNumber"
+          />
+        </div>
+
+        <div class="edit-profile__form-element">
+          <label class="edit-profile__form-label" for="website">Website</label>
+          <input
+            class="edit-profile__form-input"
+            id="website"
+            type="text"
+            class="website-input"
+            name="website"
+          />
+        </div>
+      </form>
+
+      <!-- <button class="btn btn--red btn--deleteAccount">Delete account</button> -->
+    </div>
+  </body>
+</html>

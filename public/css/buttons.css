@@ -1,0 +1,43 @@
+.btn,
+.btn:link,
+.btn:visited {
+  background: none;
+  border: none;
+  padding: 1.5rem 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 10rem;
+  transition: all 0.3s;
+}
+
+.btn--blue,
+.btn--blue:link,
+.btn--blue:visited {
+  background-color: #0077b5;
+  color: #fff;
+}
+
+.btn--blue:hover,
+.btn--blue:active {
+  background-color: #005f91;
+}
+
+.btn--red,
+.btn--red:link,
+.btn--red:visited {
+  background-color: #f03e3e;
+  color: #fff;
+}
+
+.btn--red:hover,
+.btn--red:active {
+  background-color: #c03232;
+}
+
+.btn--black {
+  background-color: #000;
+  color: #fff;
+}

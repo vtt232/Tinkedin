@@ -1,0 +1,121 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title #{profileUser.name} profile
+  //JAVASCRIPT 
+  script(src = "/js/navbar.js" type = 'module')
+  script(src = "/js/editProfile.js" type = 'module')
+
+  // STYLESHEETS
+  link(rel='stylesheet' href='/css/general.css')
+  link(rel='stylesheet' href='/css/headers.css')
+  link(rel='stylesheet' href='/css/buttons.css')
+  link(rel='stylesheet' href='/css/navbar.css')
+  link(rel='stylesheet' href='/css/profile.css')
+  link(rel='stylesheet' href='/css/modal.css')
+  // GOOGLE FONT FAMILY
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap' rel='stylesheet')
+  // ION ICON INSTALLATION
+  script(type='module' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js')
+  script(nomodule='' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js')
+  // FAVICON
+  link(rel='icon' type='image/png' href='/img/static/logo.png')
+section.profile
+  include _editProfileForm 
+  
+  nav.nav
+    .confirm-logout-container.hidden
+      .backdrop.confirm-logout-backdrop
+      .modal.confirm-logout
+        p.modal__message
+          | Are you sure you want to log out ?
+        .modal__buttons
+          button.btn.btn--red.btn--confirm Confirm
+          button.btn.btn--black.btn--cancel Cancel
+    .nav__left
+      .nav__logo-container
+        img.nav__logo(src='/img/static/logo.png')
+      .nav__search-bar
+        input.nav__search-bar-input(type='text' placeholder='Search')
+        ion-icon.nav__search-bar-icon(name='search-outline')
+    ul.nav__items
+      li.nav__item.nav__item--home
+        ion-icon.nav__item-icon(name='home-outline')
+        p.nav__item-text Home
+      li.nav__item.nav__item--profile.nav__item--active
+        ion-icon.nav__item-icon(name='person')
+        p.nav__item-text Profile
+      li.nav__item.nav__item--jobs
+        ion-icon.nav__item-icon(name='bag-outline')
+        p.nav__item-text Jobs
+      li.nav__item.nav__item--logout
+        ion-icon.nav__item-icon(name='log-out-outline')
+        p.nav__item-text Log out
+  .profile__container
+    .profile__basic-info
+      .profile__images
+        .profile__background-container
+          img.profile__background(src=`/img/users/backgrounds/${profileUser.background}`)
+        .profile__avatar-container
+          img.profile__avatar(src=`/img/users/avatars/${profileUser.avatar}`)
+      p.profile__name #{profileUser.name}
+      - if (profileUser.education)
+        p.profile__education
+            | Studied at 
+            span #{profileUser.education}
+      - if (profileUser.isLookingForJob && !profileUser.isCompany) 
+        p.profile__open-to-work
+            span Open to work:
+            span #{profileUser.jobTitle} 
+            | roles
+      
+      - if (`${profileUser.id}` === `${user.id}`)
+        button.btn.btn--blue.profile__editProfileButton Edit Profile
+      - else if (alreadyFollowed)
+        button.btn.btn--red.profile__unfollowButton(data-id = `${profileUser.id}`) Unfollow
+      - else
+        button.btn.btn--blue.profile__followButton(data-id = `${profileUser.id}`) Follow
+    
+    .profile__bio-info
+      h3.header__tertiary.profile__title #{profileUser.isCompany ? 'Overview' : 'Biography'}
+      p.profile__bio #{profileUser.overview}
+    .profile__skills-info
+      h3.header__tertiary.profile__title Specialities
+      - if (profileUser.skills.split(';') === 0)
+        p.profile__text No skills specified yet 
+      - else 
+        ul.profile__skills
+          each skill in profileUser.skills.split(';')
+            li.profile__skill-container
+              p.profile__skill #{skill}
+
+
+    - if (!profileUser.isCompany)
+        .profile__resume
+            h3.header__tertiary.profile__title Resume
+            - if (profileUser.resumeImage)
+                img.profile__resumeImage(alt = 'Resume image' src = `/img/users/resumes/${profileUser.resumeImage}`)
+            - else 
+                p.profile__text No resume uploaded yet
+            .profile__upload-resume-button-container
+                label.btn.btn--blue(for='upload-resume-input') Upload your resume
+                input#upload-resume-input(type='file')
+            .loader.hidden
+    
+    .profile__contacts-info
+        h3.header__tertiary.profile__title Contact Info
+        ul.profile__contact-info-list
+            li.profile__contact-info-container
+                ion-icon.profile__contact-info-icon(name='mail-outline')
+                p.profile__contact-info #{profileUser.email}
+            li.profile__contact-info-container
+                ion-icon.profile__contact-info-icon(name='call-outline')
+                p.profile__contact-info #{profileUser.phoneNumber}
+            li.profile__contact-info-container
+                ion-icon.profile__contact-info-icon(name='link-outline')
+                p.profile__contact-info #{profileUser.website}
+

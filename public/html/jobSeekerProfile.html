@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nguyensongvo profile</title>
+
+    <!--STYLESHEETS-->
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/headers.css" />
+    <link rel="stylesheet" href="../css/buttons.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/profile.css" />
+
+    <!--GOOGLE FONT FAMILY-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--ION ICON INSTALLATION-->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!--FAVICON-->
+    <link rel="icon" type="image/png" href="../img/static/logo.png" />
+  </head>
+  <body>
+    <section class="profile">
+      <nav class="nav">
+        <div class="nav__left">
+          <div class="nav__logo-container">
+            <img src="../img/static/logo.png" class="nav__logo" />
+          </div>
+
+          <div class="nav__search-bar">
+            <input
+              class="nav__search-bar-input"
+              type="text"
+              placeholder="Search"
+            />
+            <ion-icon
+              name="search-outline"
+              class="nav__search-bar-icon"
+            ></ion-icon>
+          </div>
+        </div>
+
+        <ul class="nav__items">
+          <li class="nav__item">
+            <ion-icon name="home-outline" class="nav__item-icon"></ion-icon>
+            <p class="nav__item-text">Home</p>
+          </li>
+
+          <li class="nav__item nav__item--active">
+            <ion-icon name="person" class="nav__item-icon"></ion-icon>
+            <p class="nav__item-text">Profile</p>
+          </li>
+
+          <li class="nav__item">
+            <ion-icon name="bag-outline" class="nav__item-icon"></ion-icon>
+            <p class="nav__item-text">Jobs</p>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="profile__container">
+        <div class="profile__basic-info">
+          <div class="profile__images">
+            <div class="profile__background-container">
+              <img
+                class="profile__background"
+                src="../img/users/backgrounds/default.jpg"
+              />
+            </div>
+
+            <div class="profile__avatar-container">
+              <img
+                class="profile__avatar"
+                src="../img/users/avatars/default.jpg"
+              />
+            </div>
+          </div>
+
+          <p class="profile__name">Nguyen Song Vo</p>
+          <p class="profile__education">
+            Student at Ho Chi Minh University Of Science
+          </p>
+          <p class="profile__open-to-work">
+            <span>Open to work:</span> Backend Engineer roles
+          </p>
+
+          <div class="profile__upload-resume-button-container">
+            <label class="btn btn--blue" for="upload-resume-input"
+              >Upload your resume</label
+            >
+            <input id="upload-resume-input" type="file" />
+          </div>
+
+          <button class="btn btn--blue profile__follow-btn">Follow</button>
+        </div>
+
+        <div class="profile__bio-info">
+          <h3 class="header__tertiary profile__title">Biography</h3>
+          <p class="profile__bio">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde
+            repellendus error, cum omnis, voluptates obcaecati temporibus
+            facilis, consequatur modi libero reiciendis dignissimos voluptate
+            eius architecto eum dolores sapiente accusamus! Eum!
+            <br />
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+            repellat ratione iure dolor, atque, dolores excepturi consequuntur
+            fugiat pariatur, error nostrum placeat fugit ad sit porro non modi
+            nulla eius!
+          </p>
+        </div>
+
+        <div class="profile__skills-info">
+          <h3 class="header__tertiary profile__title">Skills</h3>
+          <ul class="profile__skills">
+            <li class="profile__skill-container">
+              <p class="profile__skill">C++</p>
+            </li>
+
+            <li class="profile__skill-container">
+              <p class="profile__skill">Python</p>
+            </li>
+
+            <li class="profile__skill-container">
+              <p class="profile__skill">React</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

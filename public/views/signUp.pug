@@ -1,0 +1,55 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Create a new account
+
+  // STYLESHEETS
+  link(rel='stylesheet' href='/css/general.css')
+  link(rel='stylesheet' href='/css/headers.css')
+  link(rel='stylesheet' href='/css/buttons.css')
+  link(rel='stylesheet' href='/css/auth.css')
+
+  //JAVASCRIPT 
+  script(src = "/js/signUp.js" type = 'module')
+
+  // GOOGLE FONT FAMILY
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap' rel='stylesheet')
+
+  // FAVICON
+  link(rel='icon' type='image/png' href='/img/static/logo.png')
+
+section.auth
+  .auth__logo-container
+    img.auth__logo(src='/img/static/logo.png')
+  .auth__form-container
+    h3.header__tertiary
+      | Make the most out of your professional life
+    form.auth__form
+      .auth__form-item
+        label.auth__form-label(for='username') Username
+        input#username.auth__form-input(type='text' required='true' placeholder='Enter your username' name='username')
+      .auth__form-item
+        label.auth__form-label(for='password') Password
+        input#password.auth__form-input(type='password' required='true' placeholder='Enter your password' name='password')
+      .auth__form-item
+        label.auth__form-label(for='email') Email
+        input#email.auth__form-input(type='email' required='true' placeholder='Enter your email' name='email')
+      .auth__form-item
+        label.auth__form-label(for='phoneNumber')
+          | Phone Number
+        input#phoneNumber.auth__form-input(type='email' required='true' placeholder='Enter your phone number' name='phoneNumber')
+      .auth__form-item
+        label.auth__form-label(for='website') Website 
+        input#website.auth__form-input(type='email' required='true' placeholder='Enter your website' name='website')
+      .auth__form-item.auth__form-item-checkbox
+        label.auth__form-label(for='is-company') Is Company 
+        input#isCompany.auth__form-input(type='checkbox' required='true' name='isCompany')
+      button.btn.btn--blue.auth__form-btn.auth__signUp-btn
+        | Create an account
+      p.auth__form-text
+        | Already on Tinkedin ? 
+        a(href='/login') Click here

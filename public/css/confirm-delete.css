@@ -1,0 +1,68 @@
+.confirm-delete-backdrop {
+  z-index: 10000;
+}
+
+.confirm-delete {
+  width: 50rem;
+  padding: 1.2rem 1.6rem;
+  border-radius: 11px;
+  z-index: 11000;
+}
+
+.confirm-delete__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2.4rem;
+}
+
+.confirm-delete__icon {
+  font-size: 4.8rem;
+  color: #1da1f2;
+  text-align: center;
+}
+
+.confirm-delete__title {
+  font-size: 2.4rem;
+}
+
+.confirm-delete__message {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
+.confirm-delete__form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.confirm-delete__form-label {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.confirm-delete__form-input {
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 11px;
+  background-color: #e1e8ed;
+  padding: 1.2rem 1.6rem;
+}
+
+.confirm-delete__buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  gap: 2rem;
+}
+
+.confirm-delete__form-error {
+  text-align: center;
+}

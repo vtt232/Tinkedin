@@ -1,0 +1,21 @@
+mixin post(post)
+    li.post__container(data-post-id = `${post.id}`)
+        .post
+            .post__avatar-container
+                img.post__avatar(src=`/img/users/avatars/${post.user.avatar}` alt='User avatar')
+            .post__info
+                .post__userdata
+                    .post__userdisplay
+                        a.post__name(href=`/profile/${post.user.id}`) #{post.user.name}  
+                    p.post__date #{post.datePosted.toLocaleDateString(undefined, {year: 'numeric', month: 'long', day: 'numeric'})}
+
+                -if (post.content) 
+                    p.post__content #{post.content}
+                
+                - if (post.image)
+                    img.post__image(src=`/img/posts/${post.image}`)
+
+                - if (`${post.user.id}` === `${user.id}`)
+                    ion-icon.post__delete-btn(name='close-outline')
+
+                
